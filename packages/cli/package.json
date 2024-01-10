@@ -1,0 +1,58 @@
+{
+  "name": "@comakit/cli",
+  "description": "Add comakit's components to your apps",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "comakit": "dist/index.cjs"
+  },
+  "scripts": {
+    "dev": "tsup --watch ./src/index.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "publish:beta": "pnpm build && pnpm publish --no-git-checks --access public --tag beta",
+    "publish:next": "pnpm build && pnpm publish --no-git-checks --access public --tag next",
+    "publish:release": "pnpm build && pnpm publish --access public"
+  },
+  "devDependencies": {
+    "@clack/core": "0.3.3",
+    "@clack/prompts": "0.7.0",
+    "@types/node": "20.9.0",
+    "meow": "13.1.0",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revogabe/comakit.git",
+    "directory": "packages/cli"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [
+    "ui",
+    "tailwind",
+    "radix-ui",
+    "comakit",
+    "components"
+  ],
+  "dependencies": {
+    "tsup": "^8.0.1"
+  }
+}
