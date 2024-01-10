@@ -8,8 +8,8 @@ export const button = tv({
   variants: {
     variant: {
       primary:
-        'border border-primary-border text-primary-foreground bg-gradient-to-t from-primary to-primary-hover hover:opacity-75',
-      secondary: 'border border-border text-foreground bg-elements hover:bg-secondary',
+        'border bg-red-500 border-primary-border text-primary-foreground bg-gradient-to-t from-primary to-primary-hover hover:opacity-75',
+      secondary: 'border bg-blue-500 border-border text-foreground bg-elements hover:bg-secondary',
       ghost: 'text-foreground bg-transparent hover:bg-elements',
       link: 'text-primary cursor-pointer underline-offset-4 hover:underline',
       danger: 'border-danger-border border bg-danger hover:bg-danger-hover text-foreground',
