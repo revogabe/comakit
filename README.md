@@ -1,58 +1,51 @@
-# Turborepo Tailwind CSS starter
+#### COMAKIT
 
-This is an official starter Turborepo.
+## - TAILWIND
 
-## Using this example
+## - RADIX + REACT ARIA
 
-Run the following command:
+#### COMPONENTS
 
-```sh
-npx create-turbo@latest -e with-tailwind
-```
+## - BUTTON
 
-## What's inside?
+## - VARIANTS: 'PRIMARY' - 'SECONDARY' - 'GHOST' - 'OUTLINE' - 'DANGER' - 'LINK'
 
-This Turborepo includes the following packages/apps:
+## - SIZES: 'DEFAULT' - 'LG' - 'SM' - 'ICON'
 
-### Apps and Packages
+## - STATES: 'ISLOADING' - 'ISDISABLED'
 
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## - TEXT-FIELD
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## - PASSWORD-FIELD
 
-### Building packages/ui
+## - TEXTAREA
 
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.js`. This was chosen for several reasons:
+## - FORM
 
-- Make sharing one `tailwind.config.js` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
+## - DIALOG
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.js` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
+## - SCROLL-AREA
 
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
+## - CARD
 
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
-```
+## - AVATAR
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+## - CHECKBOX
 
-### Utilities
+## - RADIO-GROUP
 
-This Turborepo has some additional tools already setup for you:
+## - SELECT
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## - COMBOBOX
+
+## - HOVER-CARD
+
+## - DROPDOWN MENU
+
+## - POPOVER
+
+## - ALERT
+
+## - SWITCH
+
+## - BADGE

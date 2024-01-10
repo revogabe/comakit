@@ -1,10 +1,10 @@
-import type { Config } from "tailwindcss";
-import sharedConfig from "@repo/tailwind-config";
+import sharedConfig from '@comaqui/config-tailwind';
+import type { Config } from 'tailwindcss';
+import { withTV } from 'tailwind-variants/transformer';
 
-const config: Pick<Config, "prefix" | "presets" | "content"> = {
-  content: ["./src/**/*.tsx"],
-  prefix: "ui-",
+const config: Config = withTV({
   presets: [sharedConfig],
-};
+  content: ['./src/**/*.{ts,tsx}'],
+});
 
 export default config;

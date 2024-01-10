@@ -1,9 +1,23 @@
 {
-  "name": "@repo/eslint-config",
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@comakit/eslint-config",
+  "license": "MIT",
   "version": "0.0.0",
   "private": true,
+  "main": "index.js",
   "devDependencies": {
+    "@types/eslint": "^8.44.9",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.14.0",
     "@vercel/style-guide": "^5.1.0",
-    "eslint-config-turbo": "^1.11.3"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.16",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-mdx": "^2.2.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "eslint-plugin-tailwindcss": "^3.13.0"
   }
 }

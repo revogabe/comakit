@@ -1,41 +1,26 @@
-const { resolve } = require("node:path");
-
-const project = resolve(process.cwd(), "tsconfig.json");
-
-/*
- * This is a custom ESLint configuration for use a library
- * that utilizes React.
- *
- * This config extends the Vercel Engineering Style Guide.
- * For more information, see https://github.com/vercel/style-guide
- *
- */
-
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
-  extends: [
-    "@vercel/style-guide/eslint/browser",
-    "@vercel/style-guide/eslint/typescript",
-    "@vercel/style-guide/eslint/react",
-  ].map(require.resolve),
+  env: {
+    browser: true,
+  },
   parserOptions: {
-    project,
-  },
-  globals: {
-    JSX: true,
-  },
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project,
-      },
-      node: {
-        extensions: [".mjs", ".js", ".jsx", ".ts", ".tsx"],
-      },
+    ecmaFeatures: {
+      jsx: true,
     },
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
-  // add rules configurations here
+  extends: [
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
+  plugins: ['react'],
+  settings: {
+    react: { version: 'detect' },
+  },
   rules: {
-    "import/no-default-export": "off",
+    'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
+    'react/hook-use-state': ['error', { allowDestructuredState: true }],
+    'react/prop-types': 'off',
   },
 };

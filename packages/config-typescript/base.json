@@ -8,7 +8,6 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,
-    "noEmit": true,
     "inlineSources": false,
     "isolatedModules": true,
     "module": "ESNext",
@@ -18,6 +17,7 @@
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true,
+    "noEmit": true,
     "strictNullChecks": true
   },
   "exclude": ["node_modules"]

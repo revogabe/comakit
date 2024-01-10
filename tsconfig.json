@@ -1,3 +1,37 @@
 {
-  "extends": "tsconfig/base.json"
+        "$schema": "https://json.schemastore.org/tsconfig.json",
+        "display": "Default",
+        "compilerOptions": {
+                "composite": false,
+                "esModuleInterop": true,
+                "forceConsistentCasingInFileNames": true,
+                "allowImportingTsExtensions": true,
+                "inlineSources": false,
+                "isolatedModules": true,
+                "module": "ESNext",
+                "moduleResolution": "Bundler",
+                "noUnusedLocals": false,
+                "noUnusedParameters": false,
+                "preserveWatchOutput": true,
+                "skipLibCheck": true,
+                "strict": true,
+                "noEmit": true,
+                "strictNullChecks": true,
+                "declaration": false,
+                "declarationMap": false,
+                "baseUrl": ".",
+                "paths": {
+                        "@/*": [
+                                "./*"
+                        ],
+                }
+        },
+        "exclude": [
+                "node_modules"
+        ],
+        "include": [
+                "**/*.d.ts",
+                "**/*.ts",
+                "**/*.tsx",
+        ]
 }
