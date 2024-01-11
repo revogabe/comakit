@@ -16,23 +16,16 @@
     --placeholder: 0 0% 49%;
 
     /* Primarys */
-    --primary: 8 80% 55%;
-    --primary-hover: 8 80% 48%;
-    --primary-border: 8 100% 63%;
+    --primary: 8 95% 55%;
+    --primary-hover: 8 96% 62%;
+    --primary-border: 8 95% 65%;
     --primary-foreground: 0 0% 93%;
 
     /* Secondarys */
-    --warning: 45 100% 50%;
-    --warning-hover: 45 100% 60%;
-    --warning-border: 45 100% 60%;
-
-    --danger: 0, 84%, 60%;
-    --danger-hover: 0, 74%, 42%;
-    --danger-border: 0, 84%, 60%;
-
-    --success: 142, 71%, 45%;
-    --success-hover: 142, 72%, 29%;
-    --success-border: 142, 71%, 45%;
+    --danger: 352 78% 49%;
+    --danger-hover: 352 77% 62%;
+    --danger-border: 352 75% 65%;
+    --danger-foreground: 352 0% 93%;
   }
 }
 
@@ -66,17 +59,5 @@
 
   a {
     @apply cursor-pointer;
-  }
-
-  button:focus,
-  a:focus {
-    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background transition-shadow duration-100;
-  }
-
-  button:active:not(:focus-visible),
-  a:active:not(:focus-visible),
-  button:focus:not(:focus-visible),
-  a:focus:not(:focus-visible) {
-    @apply outline-none ring-0 ring-offset-0;
   }
 }

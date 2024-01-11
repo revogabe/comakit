@@ -27,9 +27,7 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
-    "dev": "turbo run dev:ui dev:tailwind",
-    "dev:ui": "tsup --watch",
-    "dev:tailwind": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev": "turbo run",
     "build": "tsup",
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006"
