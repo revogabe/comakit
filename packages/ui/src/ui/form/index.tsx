@@ -8,7 +8,7 @@ import { Slot } from '@radix-ui/react-slot'
 
 import { variants } from './variants'
 import { createContext } from '../../utils/create-context'
-import { TextField, textFieldVariants, type TextFieldProps } from '../text-field'
+import { TextField, type TextFieldProps } from '../text-field'
 import { cn } from '../../utils/cn'
 
 const { field, label, controlGroup, controlLeading, hint, error } = variants()
@@ -192,6 +192,7 @@ export const Control = React.forwardRef<FormControlElement, FormControlProps>((p
       unstyled={context.hasControlGroup}
       data-invalid={context.isInvalid || undefined}
       size={size}
+      className={cn(className)}
       {...controlProps}
     />
   )

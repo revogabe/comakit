@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -------------------------------------------- */
+/*  Theme
+/* -------------------------------------------- */
+
 @layer base {
   :root {
     /* Solid */
     --background: 0 0% 7%;
     --secondary: 0 0% 9%;
     --elements: 0 0% 12%;
+    --scroll-thumb: 0 0% 12%;
     --border: 0 0% 17%;
 
     /* Text */
@@ -27,9 +32,7 @@
     --danger-border: 352 75% 65%;
     --danger-foreground: 352 0% 93%;
   }
-}
 
-@layer base {
   * {
     @apply border-border selection:bg-primary selection:text-foreground antialiased;
   }
@@ -59,5 +62,49 @@
 
   a {
     @apply cursor-pointer;
+  }
+}
+
+/* -------------------------------------------- */
+/*  Animations
+/* -------------------------------------------- */
+
+@keyframes overlay-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes content-show {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes overlay-hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes content-hide {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
   }
 }

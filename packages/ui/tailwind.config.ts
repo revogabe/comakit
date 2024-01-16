@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss';
-import { withTV } from 'tailwind-variants/transformer';
+import type { Config } from 'tailwindcss'
+import { withTV } from 'tailwind-variants/transformer'
 
 const config: Config = withTV({
   content: ['./src/**/*.{ts,tsx}'],
@@ -10,6 +10,7 @@ const config: Config = withTV({
         secondary: 'hsl(var(--secondary))',
         elements: 'hsl(var(--elements))',
         border: 'hsl(var(--border))',
+        'scroll-thumb': 'hsl(var(--scroll-thumb))',
 
         foreground: 'hsl(var(--foreground))',
         'muted-foreground': 'hsl(var(--muted-foreground))',
@@ -40,8 +41,14 @@ const config: Config = withTV({
           hover: 'hsl(var(--success-hover))',
         },
       },
+      animation: {
+        'overlay-show': 'overlay-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'content-show': 'content-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'overlay-hide': 'overlay-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'content-hide': 'content-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+      },
     },
   },
-});
+})
 
-export default config;
+export default config
