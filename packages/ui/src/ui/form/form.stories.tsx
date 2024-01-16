@@ -15,13 +15,26 @@ export const Default: Story = {
     return (
       <Form.Field>
         <Form.Label>First Name</Form.Label>
+        <Form.Control placeholder="Placeholder" size="sm" />
+        <Form.Hint>Write your first name here.</Form.Hint>
+        <Form.Error>Error: This field is required. Please, fill it.</Form.Error>
+      </Form.Field>
+    )
+  },
+}
+
+export const ControlGroup: Story = {
+  render(props) {
+    return (
+      <Form.Field>
+        <Form.Label>First Name</Form.Label>
         <Form.ControlGroup>
           <Form.ControlLeading>
-            <Button size="sm" variant="secondary">
-              Teste
+            <Button className="rounded-none" variant="ghost" size="sm">
+              Select
             </Button>
           </Form.ControlLeading>
-          <Form.Control placeholder="Placeholder" size="default" />
+          <Form.Control placeholder="Placeholder" size="sm" />
         </Form.ControlGroup>
         <Form.Hint>Write your first name here.</Form.Hint>
         <Form.Error>Error: This field is required. Please, fill it.</Form.Error>

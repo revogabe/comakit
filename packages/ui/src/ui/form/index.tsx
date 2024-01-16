@@ -185,14 +185,13 @@ export const Control = React.forwardRef<FormControlElement, FormControlProps>((p
   const context = useFormFieldContext(CONTROL_NAME)
   const Component = asChild ? Slot : TextField
 
-  const { base } = textFieldVariants({ size })
-
   return (
     <Component
       ref={ref}
       id={context.id}
+      unstyled={context.hasControlGroup}
       data-invalid={context.isInvalid || undefined}
-      className={cn(base({ className }))}
+      size={size}
       {...controlProps}
     />
   )

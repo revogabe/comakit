@@ -24,15 +24,15 @@ export interface TextFieldProps extends TextFieldVariants, Omit<TextFieldPrimiti
  * --------------------------------------------------------------------------*/
 
 const TextField = React.forwardRef<TextFieldElement, TextFieldProps>((props, ref) => {
-  const { className, type, size, disabled, ...textFieldProps } = props
+  const { className, type, size, unstyled: unstyledProp, disabled, ...textFieldProps } = props
   const { base, unstyled } = textfield({ size })
 
   return (
     <input
       ref={ref}
       disabled={disabled}
-      type={type ?? 'text'}
-      className={cn(unstyled, base({ className }))}
+      type={type}
+      className={cn(unstyledProp ? unstyled({ className }) : base({ className }))}
       {...textFieldProps}
     />
   )
