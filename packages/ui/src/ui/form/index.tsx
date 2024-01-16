@@ -1,42 +1,49 @@
-'use client';
+/* ----------------------------------------------------------------------------
+ * Imports
+ * --------------------------------------------------------------------------*/
 
-import React from 'react';
-import { Primitive } from '@radix-ui/react-primitive';
-import { Slot } from '@radix-ui/react-slot';
+import React from 'react'
+import { Primitive } from '@radix-ui/react-primitive'
+import { Slot } from '@radix-ui/react-slot'
 
-import { variants } from './variants';
-import { createContext } from '../../utils/create-context';
-import { TextField } from '../text-field';
+import { variants } from './variants'
+import { createContext } from '../../utils/create-context'
+import { TextField, textFieldVariants, type TextFieldProps } from '../text-field'
+import { cn } from '../../utils/cn'
 
-const { field, label, controlGroup, controlLeading, hint, error } = variants();
+const { field, label, controlGroup, controlLeading, hint, error } = variants()
 
-/* -------------------------------------------------------------------------------------------------
- * FormFieldRoot
- * -----------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------------------
+ * Form - Field
+ * --------------------------------------------------------------------------*/
 
-const FIELD_NAME = 'FormField';
-
+type PrimitiveDivElement = React.ElementRef<typeof Primitive.div>
+type PrimitiveDivProps = React.ComponentPropsWithoutRef<typeof Primitive.div>
 type FormFieldContextValue = {
-  id: string;
-  isInvalid: boolean;
-  isOptional: boolean;
-  hasControlGroup: boolean;
-  onHasControlGroupChange: (value: boolean) => void;
-};
-
-const [FormFieldProvider, useFormFieldContext] = createContext<FormFieldContextValue>(FIELD_NAME);
-
-type PrimitiveDivProps = React.ComponentPropsWithoutRef<typeof Primitive.div>;
+  id: string
+  isInvalid: boolean
+  isOptional: boolean
+  hasControlGroup: boolean
+  onHasControlGroupChange: (value: boolean) => void
+}
 export interface FormFieldProps extends PrimitiveDivProps {
-  id?: string;
-  isInvalid?: boolean;
-  isOptional?: boolean;
+  id?: string
+  isInvalid?: boolean
+  isOptional?: boolean
 }
 
-export const Field = React.forwardRef<HTMLDivElement, FormFieldProps>((props, ref) => {
-  const { id: idProp, isInvalid = false, isOptional = false, className, ...rootProps } = props;
-  const [hasControlGroup, setHasControlGroup] = React.useState(false);
-  const id = React.useId();
+/* ----------------------------------------------------------------------------
+ * Component Form:Field
+ * --------------------------------------------------------------------------*/
+
+const FIELD_NAME = 'FormField'
+
+const [FormFieldProvider, useFormFieldContext] = createContext<FormFieldContextValue>(FIELD_NAME)
+
+export const Field = React.forwardRef<PrimitiveDivElement, FormFieldProps>((props, ref) => {
+  const { id: idProp, isInvalid = false, isOptional = false, className, ...rootProps } = props
+  const [hasControlGroup, setHasControlGroup] = React.useState(false)
+  const id = React.useId()
 
   return (
     <FormFieldProvider
@@ -48,172 +55,202 @@ export const Field = React.forwardRef<HTMLDivElement, FormFieldProps>((props, re
     >
       <Primitive.div {...rootProps} ref={ref} className={field({ className })} />
     </FormFieldProvider>
-  );
-});
+  )
+})
 
-Field.displayName = FIELD_NAME;
+Field.displayName = FIELD_NAME
 
 /* -------------------------------------------------------------------------------------------------
- * FormFieldLabel
+ * Form - Label
  * -----------------------------------------------------------------------------------------------*/
 
-const LABEL_NAME = 'FormLabel';
-
-type FormLabelElement = React.ElementRef<'label'>;
+type FormLabelElement = React.ElementRef<'label'>
 export interface FormLabelProps extends React.ComponentPropsWithoutRef<'label'> {
-  trailing?: React.ReactNode;
+  trailing?: React.ReactNode
 }
 
+/* -------------------------------------------------------------------------------------------------
+ * Component Form:Label
+ * -----------------------------------------------------------------------------------------------*/
+
+const LABEL_NAME = 'FormLabel'
+
 export const Label = React.forwardRef<FormLabelElement, FormLabelProps>((props, ref) => {
-  const { className, trailing, children, ...labelProps } = props;
-  const context = useFormFieldContext(LABEL_NAME);
+  const { className, trailing, children, ...labelProps } = props
+  const context = useFormFieldContext(LABEL_NAME)
 
   return (
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
         <label
+          ref={ref}
           htmlFor={context.id}
           data-invalid={context.isInvalid || undefined}
-          {...labelProps}
-          ref={ref}
           className={label({ className })}
+          {...labelProps}
         >
           {children}
         </label>
         {context.isOptional && (
-          <span className="rounded-[4px] border border-border bg-secondary p-1.5 py-0.5 text-[10px] text-muted-foreground">
+          <span className="rounded border border-border bg-secondary p-1.5 py-0.5 text-[10px] text-muted-foreground">
             Opcional
           </span>
         )}
       </div>
       {trailing}
     </div>
-  );
-});
+  )
+})
 
-Label.displayName = LABEL_NAME;
+Label.displayName = LABEL_NAME
 
 /* -------------------------------------------------------------------------------------------------
- * FormControlGroup
+ * Form - ControlGroup
  * -----------------------------------------------------------------------------------------------*/
 
-const CONTROL_GROUP_NAME = 'FormControlGroup';
-
-type FormControlGroupElement = React.ElementRef<'div'>;
+type FormControlGroupElement = React.ElementRef<'div'>
 export interface FormControlGroupProps extends React.ComponentPropsWithoutRef<'div'> {
-  asChild?: boolean;
+  asChild?: boolean
 }
+
+/* -------------------------------------------------------------------------------------------------
+ * Component Form:ControlGroup
+ * -----------------------------------------------------------------------------------------------*/
+
+const CONTROL_GROUP_NAME = 'FormControlGroup'
 
 export const ControlGroup = React.forwardRef<FormControlGroupElement, FormControlGroupProps>(
   (props, ref) => {
-    const { asChild = false, className, ...controlGroupProps } = props;
-    const context = useFormFieldContext(CONTROL_GROUP_NAME);
-    const Component = asChild ? Slot : 'div';
+    const { asChild = false, className, ...controlGroupProps } = props
+    const context = useFormFieldContext(CONTROL_GROUP_NAME)
+    const Component = asChild ? Slot : 'div'
+    const { onHasControlGroupChange } = context
 
-    const { onHasControlGroupChange } = context;
+    /* Notify the parent `FormField` that it has a `ControlGroup` child */
     React.useLayoutEffect(() => {
-      onHasControlGroupChange(true);
-    }, [onHasControlGroupChange]);
+      onHasControlGroupChange(true)
+    }, [onHasControlGroupChange])
 
-    return <Component className={controlGroup({ className })} {...controlGroupProps} ref={ref} />;
+    return <Component ref={ref} className={controlGroup({ className })} {...controlGroupProps} />
   },
-);
+)
 
-ControlGroup.displayName = CONTROL_GROUP_NAME;
+ControlGroup.displayName = CONTROL_GROUP_NAME
 
 /* -------------------------------------------------------------------------------------------------
- * FormControlLeading
+ * Form - ControlLeading
  * -----------------------------------------------------------------------------------------------*/
 
-const CONTROL_LEADING_NAME = 'FormControlLeading';
-
-type FormControlLeadingElement = React.ElementRef<'div'>;
+type FormControlLeadingElement = React.ElementRef<'div'>
 export interface FormControlLeadingProps extends React.ComponentPropsWithoutRef<'div'> {
-  asChild?: boolean;
+  asChild?: boolean
 }
+
+/* -------------------------------------------------------------------------------------------------
+ * Component Form:ControlLeading
+ * -----------------------------------------------------------------------------------------------*/
+
+const CONTROL_LEADING_NAME = 'FormControlLeading'
 
 export const ControlLeading = React.forwardRef<FormControlLeadingElement, FormControlLeadingProps>(
   (props, ref) => {
-    const { asChild = false, className, ...controlLeadingProps } = props;
-    const Component = asChild ? Slot : 'div';
+    const { asChild = false, className, ...controlLeadingProps } = props
+    const Component = asChild ? Slot : 'div'
 
     return (
       <Component className={controlLeading({ className })} {...controlLeadingProps} ref={ref} />
-    );
+    )
   },
-);
+)
 
-ControlLeading.displayName = CONTROL_LEADING_NAME;
+ControlLeading.displayName = CONTROL_LEADING_NAME
 
 /* -------------------------------------------------------------------------------------------------
- * FormControl
+ * Form - Control
  * -----------------------------------------------------------------------------------------------*/
 
-const CONTROL_NAME = 'FormControl';
-
-type FormControlElement = React.ElementRef<'input'>;
-export interface FormControlProps extends React.ComponentPropsWithoutRef<'input'> {
-  asChild?: boolean;
+type FormControlElement = React.ElementRef<'input'>
+export interface FormControlProps extends TextFieldProps {
+  asChild?: boolean
 }
 
+/* -------------------------------------------------------------------------------------------------
+ * Component Form:Control
+ * -----------------------------------------------------------------------------------------------*/
+
+const CONTROL_NAME = 'FormControl'
+
 export const Control = React.forwardRef<FormControlElement, FormControlProps>((props, ref) => {
-  const { asChild = false, className, ...controlProps } = props;
-  const context = useFormFieldContext(CONTROL_NAME);
-  const Component = asChild ? Slot : TextField;
+  const { asChild = false, className, size, ...controlProps } = props
+  const context = useFormFieldContext(CONTROL_NAME)
+  const Component = asChild ? Slot : TextField
+
+  const { base } = textFieldVariants({ size })
 
   return (
     <Component
+      ref={ref}
       id={context.id}
       data-invalid={context.isInvalid || undefined}
-      unstyled={asChild ? undefined : context.hasControlGroup}
-      className="placeholder:text-placeholder"
+      className={cn(base({ className }))}
       {...controlProps}
-      ref={ref}
     />
-  );
-});
+  )
+})
 
-Control.displayName = CONTROL_NAME;
+Control.displayName = CONTROL_NAME
 
 /* -------------------------------------------------------------------------------------------------
- * FormHint
+ * Form - Hint
  * -----------------------------------------------------------------------------------------------*/
 
-const HINT_NAME = 'FormHint';
-
-type FormHintElement = React.ElementRef<'span'>;
+type FormHintElement = React.ElementRef<'span'>
 export interface FormHintProps extends React.ComponentPropsWithoutRef<'span'> {}
 
-export const Hint = React.forwardRef<FormHintElement, FormHintProps>((props, ref) => {
-  const { className, ...spanProps } = props;
-  const context = useFormFieldContext(HINT_NAME);
-
-  return !context.isInvalid ? (
-    <span {...spanProps} ref={ref} className={hint({ className })} />
-  ) : null;
-});
-
-Hint.displayName = HINT_NAME;
-
 /* -------------------------------------------------------------------------------------------------
- * FormError
+ * Component Form:Hint
  * -----------------------------------------------------------------------------------------------*/
 
-const ERROR_NAME = 'FormError';
+const HINT_NAME = 'FormHint'
 
-type FormErrorElement = React.ElementRef<'span'>;
+export const Hint = React.forwardRef<FormHintElement, FormHintProps>((props, ref) => {
+  const { className, ...spanProps } = props
+  const context = useFormFieldContext(HINT_NAME)
+
+  return !context.isInvalid ? (
+    <span ref={ref} className={hint({ className })} {...spanProps} />
+  ) : null
+})
+
+Hint.displayName = HINT_NAME
+
+/* -------------------------------------------------------------------------------------------------
+ * Form - Error
+ * -----------------------------------------------------------------------------------------------*/
+
+type FormErrorElement = React.ElementRef<'span'>
 export interface FormErrorProps extends React.ComponentPropsWithoutRef<'span'> {}
 
+/* -------------------------------------------------------------------------------------------------
+ * Component Form:Error
+ * -----------------------------------------------------------------------------------------------*/
+
+const ERROR_NAME = 'FormError'
+
 export const Error = React.forwardRef<FormErrorElement, FormErrorProps>((props, ref) => {
-  const { className, ...spanProps } = props;
-  const context = useFormFieldContext(ERROR_NAME);
+  const { className, ...spanProps } = props
+  const context = useFormFieldContext(ERROR_NAME)
 
   return context.isInvalid ? (
     <span {...spanProps} ref={ref} className={error({ className })} />
-  ) : null;
-});
+  ) : null
+})
 
-Error.displayName = ERROR_NAME;
+Error.displayName = ERROR_NAME
+
+/* -------------------------------------------------------------------------------------------------
+ * Exports
+ * -----------------------------------------------------------------------------------------------*/
 
 export const Form = Object.assign(
   {},
@@ -226,4 +263,4 @@ export const Form = Object.assign(
     Hint: Hint,
     Error: Error,
   },
-);
+)

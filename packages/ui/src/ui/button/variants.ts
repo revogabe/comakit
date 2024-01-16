@@ -1,4 +1,4 @@
-import { tv } from 'tailwind-variants';
+import { tv } from 'tailwind-variants'
 
 export const button = tv({
   slots: {
@@ -28,4 +28,4 @@ export const button = tv({
     variant: 'primary',
     size: 'default',
   },
-});
+})

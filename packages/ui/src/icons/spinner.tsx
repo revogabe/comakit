@@ -7,7 +7,7 @@ export const Spinner = (props: React.ComponentProps<'svg'>) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      className={cn('animate-spin text-red-500', props.className)}
+      className={cn('animate-spin', props.className)}
       {...props}
     >
       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />

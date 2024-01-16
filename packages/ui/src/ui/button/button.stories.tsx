@@ -1,6 +1,6 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './button';
+import React from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from '../button'
 
 const meta = {
   title: 'Components/Button',
@@ -14,10 +14,10 @@ const meta = {
     size: 'default',
     isLoading: false,
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render(props) {
@@ -37,6 +37,6 @@ export const Default: Story = {
           props.children
         )}
       </Button>
-    );
+    )
   },
-};
+}
