@@ -108,16 +108,12 @@ Label.displayName = LABEL_NAME
  * Form - ControlGroup
  * -----------------------------------------------------------------------------------------------*/
 
+const CONTROL_GROUP_NAME = 'FormControlGroup'
+
 type FormControlGroupElement = React.ElementRef<'div'>
 export interface FormControlGroupProps extends React.ComponentPropsWithoutRef<'div'> {
   asChild?: boolean
 }
-
-/* -------------------------------------------------------------------------------------------------
- * Component Form:ControlGroup
- * -----------------------------------------------------------------------------------------------*/
-
-const CONTROL_GROUP_NAME = 'FormControlGroup'
 
 export const ControlGroup = React.forwardRef<FormControlGroupElement, FormControlGroupProps>(
   (props, ref) => {

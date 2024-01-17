@@ -71,7 +71,7 @@ const DialogContent = React.forwardRef<DialogContentElement, DialogContentProps>
 
   return (
     <DialogPortal>
-      <DialogOverlay className="px-4">
+      <DialogOverlay>
         <DialogPrimitive.Content
           ref={ref}
           className={cn(
