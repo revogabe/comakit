@@ -21,13 +21,14 @@ export interface TextareaProps extends TextareaVariants, Omit<TextareaPrimitiveP
 }
 
 const Textarea = React.forwardRef<TextareaElement, TextareaProps>((props, ref) => {
-  const { className, unstyled: unstyledProp, disabled, ...TextareaProps } = props
+  const { className, unstyled: unstyledProp, minRows = 3, disabled, ...TextareaProps } = props
   const { base, unstyled } = textarea()
 
   return (
     <TextareaAutosize
       ref={ref}
       disabled={disabled}
+      minRows={minRows}
       className={cn(unstyledProp ? unstyled({ className }) : base({ className }))}
       {...TextareaProps}
     />

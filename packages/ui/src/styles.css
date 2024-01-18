@@ -108,3 +108,25 @@
     transform: translate(-50%, -48%) scale(0.96);
   }
 }
+
+@keyframes selection-show {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  1000% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes selection-hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+}

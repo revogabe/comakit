@@ -19,7 +19,7 @@ export const button = tv({
       ghost: 'text-foreground bg-transparent hover:bg-elements focus-visible:bg-elements',
       outline: cn(
         'text-foreground border border-border bg-transparent hover:bg-elements hover:opacity-90',
-        'shadow-[0px_0px_0px_1.5px_theme(colors.background),0px_1px_2px_0px_theme(colors.background)]',
+        'shadow-[0px_0px_0px_1.2px_theme(colors.background)]',
       ),
       danger: cn(
         'text-danger-foreground bg-gradient-to-b from-danger to-danger-hover hover:brightness-75 border border-danger-border',

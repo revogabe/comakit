@@ -46,6 +46,8 @@ const config: Config = withTV({
         'content-show': 'content-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
         'overlay-hide': 'overlay-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
         'content-hide': 'content-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'selection-show': 'selection-show 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'selection-hide': 'selection-hide 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
