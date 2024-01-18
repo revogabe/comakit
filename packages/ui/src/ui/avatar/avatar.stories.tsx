@@ -12,9 +12,16 @@ const meta = {
       },
       options: ['default', 'sm', 'lg', 'xl'],
     },
+    shape: {
+      control: {
+        type: 'select',
+      },
+      options: ['circle', 'square'],
+    },
   },
   args: {
     size: 'xl',
+    shape: 'square',
   },
 } satisfies Meta<typeof Avatar.Root>
 
@@ -31,6 +38,64 @@ export const Default: Story = {
           alt=""
         />
       </Avatar.Root>
+    )
+  },
+}
+
+export const Group: Story = {
+  render(props) {
+    return (
+      <Avatar.Group shape="circle" max={4}>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+        <Avatar.Root>
+          <Avatar.Fallback>DG</Avatar.Fallback>
+          <Avatar.Image
+            src="https://pbs.twimg.com/profile_images/1689351221419606017/zcXbryh2_400x400.jpg"
+            alt=""
+          />
+        </Avatar.Root>
+      </Avatar.Group>
     )
   },
 }

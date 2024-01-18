@@ -35,14 +35,19 @@ export const avatar = tv({
     group: {
       true: 'rounded-full ring-background ring-2 ring-offset-2 ring-offset-background',
     },
+    shape: {
+      square: 'rounded-lg',
+      circle: 'rounded-full',
+    },
     size: {
       default: 'h-9 w-9 text-xs',
-      sm: 'h-8 w-8 text-xs rounded-full',
+      sm: 'h-8 w-8 text-xs',
       lg: 'h-10 w-10 text-sm',
       xl: 'h-14 w-14 text-base',
     },
   },
   defaultVariants: {
     size: 'default',
+    shape: 'circle',
   },
 })

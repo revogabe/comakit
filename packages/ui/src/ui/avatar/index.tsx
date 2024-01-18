@@ -21,10 +21,12 @@ type AvatarGroupPrimitiveProps = React.ComponentPropsWithoutRef<'div'>
 type AvatarGroupVariants = VariantProps<typeof avatarGroup>
 type AvatarGroupContextValue = {
   isWithinGroup: boolean
+  shape?: AvatarVariants['shape']
 }
 interface AvatarGroupProps extends AvatarGroupPrimitiveProps, AvatarGroupVariants {
   asChild?: boolean
   size?: AvatarVariants['size']
+  shape?: AvatarVariants['shape']
 }
 
 const [AvatarGroupProvider, useAvatarGroupContext] = createContext<AvatarGroupContextValue>(
@@ -35,11 +37,11 @@ const [AvatarGroupProvider, useAvatarGroupContext] = createContext<AvatarGroupCo
 )
 
 const AvatarGroup = React.forwardRef<AvatarGroupElement, AvatarGroupProps>((props, ref) => {
-  const { asChild = false, max, size, children, className, ...groupProps } = props
+  const { asChild = false, max, size, shape, children, className, ...groupProps } = props
   const Component = asChild ? Slot : 'div'
   const count = React.Children.count(children)
   const { base } = avatarGroup({ max })
-  const { base: baseRoot } = avatar({ size, group: true })
+  const { base: baseRoot } = avatar({ size, group: true, shape })
 
   return (
     <AvatarGroupProvider isWithinGroup>
@@ -70,9 +72,9 @@ type AvatarVariants = VariantProps<typeof avatar>
 export interface AvatarProps extends AvatarVariants, AvatarPrimitiveProps {}
 
 const AvatarRoot = React.forwardRef<AvatarElement, AvatarProps>((props, ref) => {
-  const { className, size, ...rootProps } = props
-  const { isWithinGroup } = useAvatarGroupContext(AVATAR_NAME)
-  const { base } = avatar({ size, group: isWithinGroup })
+  const { className, size, shape: shapeProp, ...rootProps } = props
+  const { isWithinGroup, shape } = useAvatarGroupContext(AVATAR_NAME)
+  const { base } = avatar({ size, group: isWithinGroup, shape: shapeProp || shape })
 
   return <AvatarPrimitive.Root ref={ref} className={cn(base({ className }))} {...rootProps} />
 })
@@ -120,10 +122,7 @@ const AvatarFallback = React.forwardRef<AvatarFallbackElement, AvatarFallbackPri
     return (
       <AvatarPrimitive.Fallback
         ref={ref}
-        className={cn(
-          'flex h-full w-full items-center justify-center rounded-full bg-muted',
-          className,
-        )}
+        className={cn('flex h-full w-full items-center justify-center bg-muted', className)}
         {...fallbackProps}
       />
     )

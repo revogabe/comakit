@@ -142,10 +142,6 @@ export interface FormControlLeadingProps extends React.ComponentPropsWithoutRef<
   asChild?: boolean
 }
 
-/* -------------------------------------------------------------------------------------------------
- * Component Form:ControlLeading
- * -----------------------------------------------------------------------------------------------*/
-
 const CONTROL_LEADING_NAME = 'FormControlLeading'
 
 export const ControlLeading = React.forwardRef<FormControlLeadingElement, FormControlLeadingProps>(

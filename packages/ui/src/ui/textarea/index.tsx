@@ -4,40 +4,40 @@
 
 import * as React from 'react'
 import { cn } from '../../utils/cn'
-import { textfield } from './variants'
+import { textarea } from './variants'
 import type { VariantProps } from 'tailwind-variants'
+import TextareaAutosize from 'react-textarea-autosize'
 
 /* ----------------------------------------------------------------------------
- * TextField
+ * Textarea
  * --------------------------------------------------------------------------*/
 
-type TextFieldElement = React.ComponentRef<'input'>
-type TextFieldPrimitiveProps = React.ComponentPropsWithoutRef<'input'>
-type TextFieldVariants = VariantProps<typeof textfield>
+type TextareaElement = React.ComponentRef<typeof TextareaAutosize>
+type TextareaPrimitiveProps = React.ComponentPropsWithoutRef<typeof TextareaAutosize>
+type TextareaVariants = VariantProps<typeof textarea>
 
-export interface TextFieldProps extends TextFieldVariants, Omit<TextFieldPrimitiveProps, 'size'> {
+export interface TextareaProps extends TextareaVariants, Omit<TextareaPrimitiveProps, 'size'> {
   unstyled?: boolean
 }
 
-const TextField = React.forwardRef<TextFieldElement, TextFieldProps>((props, ref) => {
-  const { className, type, size, unstyled: unstyledProp, disabled, ...textFieldProps } = props
-  const { base, unstyled } = textfield({ size })
+const Textarea = React.forwardRef<TextareaElement, TextareaProps>((props, ref) => {
+  const { className, unstyled: unstyledProp, disabled, ...TextareaProps } = props
+  const { base, unstyled } = textarea()
 
   return (
-    <input
+    <TextareaAutosize
       ref={ref}
       disabled={disabled}
-      type={type}
       className={cn(unstyledProp ? unstyled({ className }) : base({ className }))}
-      {...textFieldProps}
+      {...TextareaProps}
     />
   )
 })
 
-TextField.displayName = 'TextField'
+Textarea.displayName = 'Textarea'
 
 /* ----------------------------------------------------------------------------
  * Exports
  * --------------------------------------------------------------------------*/
 
-export { TextField, textfield as textFieldVariants }
+export { Textarea, Textarea as TextareaVariants }
