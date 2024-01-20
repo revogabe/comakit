@@ -23,22 +23,18 @@ const config: Config = withTV({
           hover: 'hsl(var(--primary-hover))',
         },
 
-        warning: {
-          DEFAULT: 'hsl(var(--warning))',
-          border: 'hsl(var(--warning-border))',
-          hover: 'hsl(var(--warning-hover))',
-        },
-
         danger: {
           DEFAULT: 'hsl(var(--danger))',
           border: 'hsl(var(--danger-border))',
           hover: 'hsl(var(--danger-hover))',
+          foreground: 'hsl(var(--danger-foreground))',
         },
 
         success: {
           DEFAULT: 'hsl(var(--success))',
           border: 'hsl(var(--success-border))',
           hover: 'hsl(var(--success-hover))',
+          foreground: 'hsl(var(--success-foreground))',
         },
       },
       animation: {
@@ -46,8 +42,13 @@ const config: Config = withTV({
         'content-show': 'content-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
         'overlay-hide': 'overlay-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
         'content-hide': 'content-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'dropdown-hide': 'dropdown-hide 200ms cubic-bezier(0.16, 1, 0.3, 1)',
         'selection-show': 'selection-show 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         'selection-hide': 'selection-hide 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-down-fade': 'slide-down-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-left-fade': 'slide-left-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-up-fade': 'slide-up-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-right-fade': 'slide-right-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

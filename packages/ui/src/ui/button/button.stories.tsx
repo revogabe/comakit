@@ -6,7 +6,10 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    variant: { control: 'select', options: ['primary', 'secondary', 'ghost', 'outline', 'danger'] },
+    variant: {
+      control: 'radio',
+      options: ['primary', 'secondary', 'ghost', 'outline', 'danger', 'success'],
+    },
   },
   args: {
     children: 'Button',
