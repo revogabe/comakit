@@ -22,8 +22,8 @@ export const button = tv({
         'shadow-[0px_0px_0px_1.2px_theme(colors.background)]',
       ),
       danger: cn(
-        'text-danger-foreground bg-gradient-to-b from-danger to-danger-hover hover:brightness-75 border border-danger-border',
-        'shadow-[0px_0px_0px_1px_theme(colors.danger.DEFAULT),0px_1px_2px_0px_theme(colors.danger.DEFAULT)]',
+        'text-danger-foreground hover:brightness-75 border bg-danger border-danger-border',
+        'shadow-[0px_0px_0px_1px_theme(colors.background),0px_1px_2px_0px_theme(colors.background)]',
       ),
     },
     size: {

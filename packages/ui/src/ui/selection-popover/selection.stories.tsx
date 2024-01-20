@@ -27,15 +27,15 @@ export const Default: Story = {
             </p>
           </SelectionPopover.Trigger>
           <SelectionPopover.Content side="top" sideOffset={12}>
-            <Button size="sm" variant="secondary">
-              Cut
-            </Button>
-            <Button size="sm" variant="secondary">
-              Copy
-            </Button>
-            <Button size="sm" variant="secondary">
-              Share
-            </Button>
+            <div className="hover:bg-background/25 cursor-pointer duration-150 group ease-out px-2 py-0.5 rounded-md ">
+              <p className="group-hover:text-foreground duration-150 ease-out">Cut</p>
+            </div>
+            <div className="hover:bg-background/25 cursor-pointer duration-150 group ease-out px-2 py-0.5 rounded-md ">
+              <p className="group-hover:text-foreground duration-150 ease-out">Copy</p>
+            </div>
+            <div className="hover:bg-background/25 cursor-pointer duration-150 group ease-out px-2 py-0.5 rounded-md ">
+              <p className="group-hover:text-foreground duration-150 ease-out">Share</p>
+            </div>
             {/* <SelectionPopover.Arrow /> */}
           </SelectionPopover.Content>
         </SelectionPopover.Root>
