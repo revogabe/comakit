@@ -1,51 +1,93 @@
-#### COMAKIT
+# [] - Accordion
 
-## - TAILWIND
+# [] - Alert
 
-## - RADIX + REACT ARIA
+# [X] - Alert Dialog
 
-#### COMPONENTS
+# [] - Aspect Ratio
 
-## - BUTTON
+# [X] - Avatar
 
-## - VARIANTS: 'PRIMARY' - 'SECONDARY' - 'GHOST' - 'OUTLINE' - 'DANGER' - 'LINK'
+# [] - Badge
 
-## - SIZES: 'DEFAULT' - 'LG' - 'SM' - 'ICON'
+# [X] - Button
 
-## - STATES: 'ISLOADING' - 'ISDISABLED'
+# [] - Calendar
 
-## - TEXT-FIELD
+# [X] - Card
 
-## - PASSWORD-FIELD
+# [] - Carousel
 
-## - TEXTAREA
+# [] - Checkbox
 
-## - FORM
+# [] - Collapsible
 
-## - DIALOG
+# [] - Combobox
 
-## - SCROLL-AREA
+# [] - Command
 
-## - CARD
+# [] - Context Menu
 
-## - AVATAR
+# [] - Table with Tanstack
 
-## - CHECKBOX
+# [] - Date Picker
 
-## - RADIO-GROUP
+# [X] - Dialog
 
-## - SELECT
+# [] - Drawer
 
-## - COMBOBOX
+# [X] - Dropdown Menu
 
-## - HOVER-CARD
+# [X] - Form
 
-## - DROPDOWN MENU
+# [] - Hover Card
 
-## - POPOVER
+# [X] - Text-Field
 
-## - ALERT
+# [X] - TextArea
 
-## - SWITCH
+# [] - Menubar
 
-## - BADGE
+# [] - Navigation Menu
+
+# [] - Pagination
+
+# [] - Popover
+
+# [X] - Selection Popover
+
+# [] - Progress
+
+# [] - Radio Group
+
+# [] - Resizable
+
+# [X] - Scroll Area
+
+# [] - Select & with Combobox
+
+# [] - Separator
+
+# [] - Sheet
+
+# [] - Skeleton
+
+# [X] - Slider
+
+# [] - Sonner
+
+# [X] - Switch
+
+# [] - Tabs
+
+# [] - TextArea
+
+# [] - Toast
+
+# [] - Toggle
+
+# [] - Toggle Group
+
+# [] - Tooltip
+
+# [] - Color Picker

@@ -1,6 +1,7 @@
 import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { ScrollArea } from '../scroll-area'
+import { Card } from '../card'
 
 const meta = {
   title: 'Components/ScrollArea',
@@ -12,13 +13,52 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render(props) {
     return (
-      <ScrollArea.Root className="h-[400px] w-full">
-        <main className="h-[4000px] w-[400px] bg-red-500 flex justify-between">
-          <div className="flex">Hello</div>
-          <div className="flex">Hello</div>
+      <Card.Root>
+        <ScrollArea.Root className="w-[400px] h-[400px] ">
+          <div className="w-full h-full">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente ex commodi reiciendis
+            voluptatem debitis molestias minus in, temporibus culpa aliquam possimus accusantium vel
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            consequuntur cumque. Quasi. enim. Repellendus animi aut consequuntur cumque. Quasi.
+            enim. Repellendus animi aut consequuntur cumque. Quasi. enim. Repellendus animi aut
+            enim. Repellendus animi aut consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+            consequuntur cumque. Quasi. consequuntur cumque. Quasi.
+          </div>
           <ScrollArea.Bar orientation="vertical" />
-        </main>
-      </ScrollArea.Root>
+        </ScrollArea.Root>
+      </Card.Root>
     )
   },
 }
