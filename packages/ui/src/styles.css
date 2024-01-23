@@ -90,10 +90,6 @@
   button {
     @apply cursor-default;
   }
-
-  a {
-    @apply cursor-pointer;
-  }
 }
 
 /* -------------------------------------------- */

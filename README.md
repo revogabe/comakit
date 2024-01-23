@@ -12,7 +12,7 @@
 
 # [X] - Button
 
-# [] - Calendar
+# [X] - Calendar
 
 # [X] - Card
 
@@ -40,7 +40,7 @@
 
 # [X] - Form
 
-# [] - Hover Card
+# [X] - Hover Card
 
 # [X] - Text-Field
 
@@ -50,9 +50,11 @@
 
 # [] - Navigation Menu
 
+# [X] - Nav Link
+
 # [] - Pagination
 
-# [] - Popover
+# [X] - Popover
 
 # [X] - Selection Popover
 
@@ -80,7 +82,7 @@
 
 # [] - Tabs
 
-# [] - TextArea
+# [X] - TextArea
 
 # [] - Toast
 
