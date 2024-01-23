@@ -80,7 +80,7 @@ const AlertDialogContent = React.forwardRef<AlertDialogContentElement, AlertDial
           <AlertDialogPrimitive.Content
             ref={ref}
             className={cn(
-              'fixed left-[50%] top-[50%] z-50 grid w-full max-w-md translate-x-[-50%] translate-y-[-50%] gap-6 border bg-secondary p-6 shadow-lg duration-200 sm:rounded-lg',
+              'fixed left-[50%] top-[50%] z-50 grid w-full max-w-md rounded-lg translate-x-[-50%] translate-y-[-50%] gap-6 border bg-secondary p-6 shadow-lg duration-200 sm:rounded-lg',
               'data-[state=open]:animate-content-show data-[state=closed]:animate-content-hide ease-out transition-all',
               className,
             )}

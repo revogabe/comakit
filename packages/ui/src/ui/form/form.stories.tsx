@@ -30,7 +30,7 @@ export const ControlGroup: Story = {
         <Form.Label>First Name</Form.Label>
         <Form.ControlGroup>
           <Form.ControlLeading>
-            <Button className="rounded-none" variant="ghost" size="sm">
+            <Button className="rounded-none px-4" variant="ghost" size="sm">
               Select
             </Button>
           </Form.ControlLeading>
