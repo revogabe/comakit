@@ -6,7 +6,7 @@ import * as React from 'react'
 import { Slot, Slottable } from '@radix-ui/react-slot'
 import { type VariantProps } from 'tailwind-variants'
 import { button } from './variants'
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
 import { Spinner } from '../../icons/spinner'
 
 /* -----------------------------------------------------------------------------

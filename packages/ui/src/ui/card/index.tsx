@@ -3,7 +3,7 @@
  * ----------------------------------------------------------------------------*/
 
 import * as React from 'react'
-import { cn } from '../../utils/cn'
+import { cn } from '@/utils/cn'
 import type { VariantProps } from 'tailwind-variants'
 import { card } from './variants'
 

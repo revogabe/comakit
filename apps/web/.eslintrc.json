@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:tailwindcss/recommended"
+  ],
+  "rules": {
+    "tailwindcss/no-custom-classname": "off",
+    "@next/next/no-html-link-for-pages": "off"
+  },
+  "settings": {
+    "tailwindcss": {
+      "config": "tailwind.config.js",
+      "callees": [
+        "tv",
+        "clsx",
+        "cn"
+      ]
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
+}

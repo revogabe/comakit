@@ -18,6 +18,7 @@
     "node": ">=18"
   },
   "dependencies": {
+    "tailwind-variants": "^0.1.18",
     "typescript": "^5.3.3"
   }
 }
