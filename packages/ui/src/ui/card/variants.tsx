@@ -1,10 +1,10 @@
 import { tv } from 'tailwind-variants'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 export const card = tv({
   slots: {
     base: cn(
-      'bg-secondary border gap-6 text-sm border-border rounded-lg fixed grid w-full max-w-md duration-200 sm:rounded-lg',
+      'bg-secondary border gap-6 text-sm border-border rounded-lg grid w-full max-w-md duration-200 sm:rounded-lg',
       'shadow-[0px_0px_0px_1px_theme(colors.background),0px_1px_2px_0px_theme(colors.background)]',
     ),
   },
