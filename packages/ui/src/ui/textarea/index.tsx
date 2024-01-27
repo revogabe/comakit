@@ -3,7 +3,7 @@
  * --------------------------------------------------------------------------*/
 
 import * as React from 'react'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 import { textarea } from './variants'
 import type { VariantProps } from 'tailwind-variants'
 import TextareaAutosize from 'react-textarea-autosize'

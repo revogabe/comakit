@@ -33,7 +33,7 @@ export const avatar = tv({
   },
   variants: {
     group: {
-      true: 'ring-background ring-offset-background rounded-full ring-2 ring-offset-2',
+      true: 'ring-secondary ring-offset-secondary rounded-full ring-2 ring-offset-2',
     },
     shape: {
       square: 'rounded-lg',

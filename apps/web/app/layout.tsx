@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../css/globals.css'
+import Image from 'next/image'
+import { HeroOverlay } from '@/components/hero-overlay'
+import { Header } from '@/components/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,13 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex h-14 border-b">
-          <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-8">
-            Header
-          </div>
+      <body className={`${inter.className} relative min-h-screen w-full overflow-y-auto`}>
+        <Header />
+        <div className="pt-14">
+          {children}
+          <HeroOverlay />
         </div>
-        {children}
       </body>
     </html>
   )

@@ -9,7 +9,7 @@ import { Slot } from '@radix-ui/react-slot'
 import { variants } from './variants'
 import { createContext } from '../../utils/create-context'
 import { TextField, type TextFieldProps } from '../text-field'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 const { field, label, controlGroup, controlLeading, hint, error } = variants()
 

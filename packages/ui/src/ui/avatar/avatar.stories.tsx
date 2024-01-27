@@ -45,7 +45,7 @@ export const Default: Story = {
 export const Group: Story = {
   render(props) {
     return (
-      <Avatar.Group shape="circle" max={4}>
+      <Avatar.Group shape="circle" max={3}>
         <Avatar.Root>
           <Avatar.Fallback>DG</Avatar.Fallback>
           <Avatar.Image

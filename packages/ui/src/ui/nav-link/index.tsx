@@ -6,7 +6,7 @@ import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { type VariantProps } from 'tailwind-variants'
 import { link } from './variants'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 /* -----------------------------------------------------------------------------
  * NavLink Types

@@ -1,5 +1,5 @@
 import { tv } from 'tailwind-variants'
-import { cn } from '@/utils/cn'
+import { cn } from '../../utils/cn'
 
 export const switchRoot = tv({
   slots: {

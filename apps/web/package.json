@@ -30,6 +30,7 @@
     "react": "^18",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
     "react-textarea-autosize": "^8.5.3",
     "selection-popover": "^0.3.0",
     "tailwind-merge": "^2.1.0",
