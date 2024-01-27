@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative min-h-screen w-full overflow-y-auto`}>
+      <body
+        className={`${inter.className} scrollbar-default relative min-h-screen w-full overflow-y-scroll`}
+      >
         <Header />
         <div className="pt-14">
           {children}

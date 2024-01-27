@@ -38,7 +38,7 @@ export const AuthCard = ({ className }: { className?: string }) => {
 
           <Form.Field className="mt-4 w-full">
             <Form.Label>Password</Form.Label>
-            <Form.Control className="w-full" placeholder="Enter your password" />
+            <Form.Control type="password" className="w-full" placeholder="Enter your password" />
           </Form.Field>
 
           <Button className="mt-8 w-full">Entrar</Button>

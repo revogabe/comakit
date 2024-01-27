@@ -22,7 +22,7 @@ const Home: App.Page = () => {
         ease: 'easeOut',
         duration: 0.8,
       }}
-      className="mx-auto flex min-h-screen max-w-[1440px] flex-col items-center justify-start px-8 pb-12"
+      className="mx-auto flex min-h-screen  max-w-[1440px] flex-col items-center justify-start px-8 pb-12"
     >
       <div className="flex h-max w-full flex-col items-center justify-start">
         <motion.span

@@ -52,6 +52,7 @@ const config: Config = withTV({
       },
     },
   },
+  plugins: [require('tailwind-scrollbar-hide')],
 })
 
 export default config

@@ -39,7 +39,7 @@ export const Header = () => {
         },
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-8">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-4">
         <div className="flex items-center justify-center gap-2.5">
           <Image width={240} height={240} className="h-6 w-6" src="/comakit.png" alt="" />
           <h2>
