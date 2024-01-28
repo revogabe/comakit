@@ -64,21 +64,21 @@ export const Header = () => {
           </NavLink>
           <NavLink
             variant="secondary"
-            className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
+            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
             href="/themes"
           >
             Themes
           </NavLink>
           <NavLink
             variant="secondary"
-            className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
+            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
             href="/layouts"
           >
             Layouts
           </NavLink>
           <NavLink
             variant="secondary"
-            className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
+            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
             href="/icons"
           >
             Icons

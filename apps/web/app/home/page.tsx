@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { AuthCard, CookiesCard, SocialCard } from '@/components/cards'
 import Image from 'next/image'
 import { Stacks } from '@/components/stacks'
+import { Feature } from '@/components/feature'
+import { Foooter } from '@/components/footer'
 
 const Home: App.Page = () => {
   const [spanHovered, setSpanHovered] = React.useState(false)
@@ -180,10 +182,49 @@ const Home: App.Page = () => {
         <Stacks />
 
         {/* Features */}
-
-        {/* FAQ */}
+        <div className="grid grid-cols-3 gap-8 py-14">
+          <Feature
+            title="Composable"
+            description="Composable, reusable and fully scalable components."
+          />
+          <Feature
+            title="Automation with CLI"
+            description="With the CLI you can create components in your project much faster and easier, ready to use."
+            className="col-span-2 max-w-full"
+          />
+          <Feature
+            title="Themes"
+            description="Variety of themes for all tastes, and integration with custom themes such as: Dracula, Rose Pine and much more.."
+            disabled
+            date="Summer 2024"
+          />
+          <Feature
+            title="Templates & Layouts"
+            description="Everything you need to build beautiful responsive web applications."
+            disabled
+            date="Winter 2024"
+          >
+            <AuthCard className="absolute left-0 top-0 -z-10 translate-y-[0%] scale-90 duration-300 ease-out group-hover:translate-y-[-2%]" />
+          </Feature>
+          <Feature
+            title="Consistent Icons"
+            description="Responsive, consistent and animated icons. Available in SVG, React Components and more..."
+            disabled
+            date="Summer 2025"
+          >
+            <Image
+              width={2000}
+              height={2000}
+              quality={100}
+              src="/grid-icons.png"
+              alt=""
+              className="absolute left-0 top-0 -z-10 translate-y-[-8%] rotate-12 scale-110 duration-300 ease-out group-hover:translate-y-[-12%] group-hover:scale-[1.15]"
+            />
+          </Feature>
+        </div>
 
         {/* Footer */}
+        <Foooter />
       </div>
     </motion.main>
   )
