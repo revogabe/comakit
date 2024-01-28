@@ -65,16 +65,23 @@ export const Header = () => {
           <NavLink
             variant="secondary"
             className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
-            href="/components"
+            href="/themes"
           >
-            Components
+            Themes
           </NavLink>
           <NavLink
             variant="secondary"
             className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
-            href="/github"
+            href="/layouts"
           >
-            Github
+            Layouts
+          </NavLink>
+          <NavLink
+            variant="secondary"
+            className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
+            href="/icons"
+          >
+            Icons
           </NavLink>
         </div>
 

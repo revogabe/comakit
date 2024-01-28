@@ -5,6 +5,8 @@ import { Button, Card } from '@/comakit'
 import { cn } from '@/utils/cn'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AuthCard, CookiesCard, SocialCard } from '@/components/cards'
+import Image from 'next/image'
+import { Stacks } from '@/components/stacks'
 
 const Home: App.Page = () => {
   const [spanHovered, setSpanHovered] = React.useState(false)
@@ -25,6 +27,7 @@ const Home: App.Page = () => {
       className="mx-auto flex min-h-screen  max-w-[1440px] flex-col items-center justify-start px-8 pb-12"
     >
       <div className="flex h-max w-full flex-col items-center justify-start">
+        {/* Badge */}
         <motion.span
           initial={{
             opacity: 0,
@@ -71,6 +74,8 @@ const Home: App.Page = () => {
             Comakit 1.0 - Beta
           </p>
         </motion.span>
+
+        {/* Hero */}
         <div className="mt-6 flex flex-col items-center justify-center gap-2">
           <motion.h1
             initial={{
@@ -160,6 +165,7 @@ const Home: App.Page = () => {
           </div>
         </div>
 
+        {/* Components */}
         <div className="relative flex w-full items-center justify-center overflow-hidden pb-12 pt-28">
           <SocialCard className="translate-x-[25%] translate-y-[15%] duration-500 ease-out hover:translate-y-[13%] hover:brightness-110" />
 
@@ -170,7 +176,14 @@ const Home: App.Page = () => {
           <div className="via-background from-background pointer-events-none absolute bottom-0 z-40 h-[420px] w-full translate-y-[45%] bg-gradient-to-t to-transparent" />
         </div>
 
-        <div className="h-[800px] w-full"></div>
+        {/* Librarys and Stacks */}
+        <Stacks />
+
+        {/* Features */}
+
+        {/* FAQ */}
+
+        {/* Footer */}
       </div>
     </motion.main>
   )
