@@ -37,6 +37,7 @@ const config: Config = withTV({
           foreground: 'hsl(var(--success-foreground))',
         },
       },
+
       animation: {
         'overlay-show': 'overlay-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
         'content-show': 'content-show 250ms cubic-bezier(0.16, 1, 0.3, 1)',
@@ -49,6 +50,8 @@ const config: Config = withTV({
         'slide-left-fade': 'slide-left-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-up-fade': 'slide-up-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         'slide-right-fade': 'slide-right-fade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-down': 'slide-down 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        'slide-up': 'slide-up 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },
     },
   },

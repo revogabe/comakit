@@ -21,7 +21,7 @@ export const Feature = ({
   return (
     <Card.Root
       className={cn(
-        'group relative flex h-[320px] select-none flex-col items-start justify-end overflow-hidden duration-300 ease-out hover:scale-[1.02] hover:brightness-110',
+        'group relative flex h-[320px] select-none flex-col items-start justify-end overflow-hidden duration-300 ease-out hover:scale-[1.02] hover:brightness-110 max-lg:max-w-full',
         {
           'bg-secondary/30 border-border/30': disabled,
         },

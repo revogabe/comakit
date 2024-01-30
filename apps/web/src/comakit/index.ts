@@ -1,5 +1,6 @@
 'use client'
 
+export { Accordion } from './accordion'
 export { AlertDialog } from './alert-dialog'
 export { Avatar, type AvatarProps } from './avatar'
 export { Button, type ButtonProps } from './button'

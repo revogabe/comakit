@@ -9,6 +9,7 @@ import Image from 'next/image'
 import { Stacks } from '@/components/stacks'
 import { Feature } from '@/components/feature'
 import { Foooter } from '@/components/footer'
+import { Faq } from '@/components/faq'
 
 const Home: App.Page = () => {
   const [spanHovered, setSpanHovered] = React.useState(false)
@@ -26,7 +27,7 @@ const Home: App.Page = () => {
         ease: 'easeOut',
         duration: 0.8,
       }}
-      className="mx-auto flex min-h-screen  max-w-[1440px] flex-col items-center justify-start px-8 pb-12"
+      className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col items-center justify-start px-8 pb-12"
     >
       <div className="flex h-max w-full flex-col items-center justify-start">
         {/* Badge */}
@@ -93,7 +94,7 @@ const Home: App.Page = () => {
               duration: 0.8,
               delay: 0.2,
             }}
-            className="from-foreground/40 to-foreground  bg-gradient-to-r bg-clip-text text-8xl text-transparent"
+            className="from-foreground/40 to-foreground bg-gradient-to-r  bg-clip-text text-8xl text-transparent max-sm:text-6xl"
           >
             Comakit
           </motion.h1>
@@ -112,12 +113,12 @@ const Home: App.Page = () => {
               duration: 0.8,
               delay: 0.4,
             }}
-            className="from-muted-foreground/50 to-foreground mt-2 w-[530px] bg-gradient-to-r bg-clip-text text-center font-normal text-transparent"
+            className="from-muted-foreground/50 to-foreground mt-2 bg-gradient-to-r bg-clip-text text-center font-normal text-transparent max-sm:text-sm sm:w-[530px]"
           >
             Welcome to Comakit, your ultimate UI library for React, inspired by the best in the
             field.
           </motion.h3>
-          <div className="mt-16 flex gap-6">
+          <div className="mt-16 flex flex-col items-center justify-center gap-6 sm:flex-row">
             <Button variant="secondary">Explore Components</Button>
             <div className="relative">
               <Button
@@ -168,21 +169,21 @@ const Home: App.Page = () => {
         </div>
 
         {/* Components */}
-        <div className="relative flex w-full items-center justify-center overflow-hidden pb-12 pt-28">
-          <SocialCard className="translate-x-[25%] translate-y-[15%] duration-500 ease-out hover:translate-y-[13%] hover:brightness-110" />
+        <div className="relative flex w-full items-center justify-center pt-8 max-md:w-screen max-md:overflow-hidden md:pb-12 md:pt-28">
+          <SocialCard className=" translate-x-[60%] translate-y-[15%] duration-500 ease-out hover:translate-y-[13%] hover:brightness-110 max-md:hidden  xl:translate-x-[25%]" />
 
-          <AuthCard className="bg-secondary/90 z-30 shadow-2xl shadow-black/50 duration-500 ease-out hover:translate-y-[-2%] hover:brightness-110" />
+          <AuthCard className="bg-secondary/90 z-30 shadow-2xl shadow-black/50 duration-500 ease-out hover:translate-y-[-2%] hover:brightness-110 max-md:scale-[0.8]" />
 
-          <CookiesCard className="translate-x-[-25%] translate-y-[20%] duration-500 ease-out hover:translate-y-[18%] hover:brightness-110" />
+          <CookiesCard className="translate-x-[-60%] translate-y-[20%] duration-500 ease-out hover:translate-y-[18%] hover:brightness-110 max-md:hidden xl:translate-x-[-25%]" />
 
-          <div className="via-background from-background pointer-events-none absolute bottom-0 z-40 h-[420px] w-full translate-y-[45%] bg-gradient-to-t to-transparent" />
+          <div className="via-background from-background pointer-events-none absolute bottom-0 z-40 h-[420px] w-screen translate-y-[45%] bg-gradient-to-t to-transparent" />
         </div>
 
         {/* Librarys and Stacks */}
         <Stacks />
 
         {/* Features */}
-        <div className="grid grid-cols-3 gap-8 py-14">
+        <div className="flex grid-cols-3 flex-col gap-8 pb-32 pt-14 lg:grid">
           <Feature
             title="Composable"
             description="Composable, reusable and fully scalable components."
@@ -221,6 +222,15 @@ const Home: App.Page = () => {
               className="absolute left-0 top-0 -z-10 translate-y-[-8%] rotate-12 scale-110 duration-300 ease-out group-hover:translate-y-[-12%] group-hover:scale-[1.15]"
             />
           </Feature>
+        </div>
+
+        {/* FAQ */}
+        <div className="flex w-full max-w-[1080px] flex-col items-center justify-center gap-12">
+          <div className="text-center ">
+            <h2>Frequently Asked Questions</h2>
+            <p className="mt-2">Here are some of our frequently asked questions.</p>
+          </div>
+          <Faq />
         </div>
 
         {/* Footer */}

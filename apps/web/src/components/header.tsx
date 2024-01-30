@@ -39,10 +39,10 @@ export const Header = () => {
         },
       )}
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-4">
-        <div className="flex items-center justify-center gap-2.5">
-          <Image width={240} height={240} className="h-6 w-6" src="/comakit.png" alt="" />
-          <h2>
+      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-6 px-4">
+        <div className="hidden shrink-0 items-center justify-center gap-2.5 md:flex">
+          <Image width={240} height={240} className="h-6 w-6 shrink-0" src="/comakit.png" alt="" />
+          <h2 className="">
             Comakit <span className="text-primary-border">UI</span>
           </h2>
         </div>
@@ -51,7 +51,7 @@ export const Header = () => {
           <NavLink
             variant="secondary"
             className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
-            href="/docs"
+            href="http://docs.localhost:3000/installation"
           >
             Docs
           </NavLink>
@@ -64,28 +64,21 @@ export const Header = () => {
           </NavLink>
           <NavLink
             variant="secondary"
-            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
+            className="text-muted-foreground hover:text-foreground  text-sm font-medium  duration-200 ease-out"
+            href="/contributors"
+          >
+            Contributors
+          </NavLink>
+          <NavLink
+            variant="secondary"
+            className="text-muted-foreground hover:text-foreground pointer-events-none hidden text-sm font-medium opacity-25 duration-200 ease-out sm:flex"
             href="/themes"
           >
             Themes
           </NavLink>
-          <NavLink
-            variant="secondary"
-            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
-            href="/layouts"
-          >
-            Layouts
-          </NavLink>
-          <NavLink
-            variant="secondary"
-            className="text-muted-foreground hover:text-foreground pointer-events-none text-sm font-medium opacity-25 duration-200 ease-out"
-            href="/icons"
-          >
-            Icons
-          </NavLink>
         </div>
 
-        <div className="flex items-center justify-end gap-6">
+        <div className=" shrink-0 items-center justify-end gap-6 ">
           <Button
             className="duration-300 ease-out"
             variant={scroll >= 100 ? 'primary' : 'secondary'}

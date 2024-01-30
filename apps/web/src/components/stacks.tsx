@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Stacks = () => {
   return (
-    <div className="my-20 flex flex-col items-center justify-center gap-12">
+    <div className="z-40 my-20 flex flex-col items-center justify-center gap-12">
       <p className="text-placeholder">We use the best libraries at the moment.</p>
-      <div className=" flex w-full items-center justify-center gap-24">
+      <div className=" flex  w-full flex-col items-center justify-center gap-12 md:flex-row lg:gap-24">
         <a href="https://tailwindcss.com/" target="_blank">
           <div className="text-foreground hover:text-primary w-44 cursor-pointer duration-300 ease-out">
             <svg viewBox="0 0 248 31">
