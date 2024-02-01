@@ -170,7 +170,7 @@ const Home: App.Page = () => {
 
         {/* Components */}
         <div className="relative flex w-full items-center justify-center pt-8 max-md:w-screen max-md:overflow-hidden md:pb-12 md:pt-28">
-          <SocialCard className=" translate-x-[60%] translate-y-[15%] duration-500 ease-out hover:translate-y-[13%] hover:brightness-110 max-md:hidden  xl:translate-x-[25%]" />
+          <SocialCard className="translate-x-[60%] translate-y-[15%] duration-500 ease-out hover:translate-y-[13%] hover:brightness-110 max-md:hidden  xl:translate-x-[25%]" />
 
           <AuthCard className="bg-secondary/90 z-30 shadow-2xl shadow-black/50 duration-500 ease-out hover:translate-y-[-2%] hover:brightness-110 max-md:scale-[0.8]" />
 
@@ -225,7 +225,7 @@ const Home: App.Page = () => {
         </div>
 
         {/* FAQ */}
-        <div className="flex w-full max-w-[1080px] flex-col items-center justify-center gap-12">
+        <div className="card">
           <div className="text-center ">
             <h2>Frequently Asked Questions</h2>
             <p className="mt-2">Here are some of our frequently asked questions.</p>
