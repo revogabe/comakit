@@ -1,95 +1,97 @@
-# [] - Accordion
+# @comakit/ui
 
-# [] - Alert
+- [ ] - Accordion
 
-# [X] - Alert Dialog
+- [ ] - Alert
 
-# [] - Aspect Ratio
+- [X] - Alert Dialog
 
-# [X] - Avatar
+- [ ] - Aspect Ratio
 
-# [] - Badge
+- [X] - Avatar
 
-# [X] - Button
+- [ ] - Badge
 
-# [X] - Calendar
+- [X] - Button
 
-# [X] - Card
+- [X] - Calendar
 
-# [] - Carousel
+- [X] - Card
 
-# [] - Checkbox
+- [ ] - Carousel
 
-# [] - Collapsible
+- [ ] - Checkbox
 
-# [] - Combobox
+- [ ] - Collapsible
 
-# [] - Command
+- [ ] - Combobox
 
-# [] - Context Menu
+- [ ] - Command
 
-# [] - Table with Tanstack
+- [ ] - Context Menu
 
-# [] - Date Picker
+- [ ] - Table with Tanstack
 
-# [X] - Dialog
+- [ ] - Date Picker
 
-# [] - Drawer
+- [X] - Dialog
 
-# [X] - Dropdown Menu
+- [ ] - Drawer
 
-# [X] - Form
+- [X] - Dropdown Menu
 
-# [X] - Hover Card
+- [X] - Form
 
-# [X] - Text-Field
+- [X] - Hover Card
 
-# [X] - TextArea
+- [X] - Text-Field
 
-# [] - Menubar
+- [X] - TextArea
 
-# [] - Navigation Menu
+- [ ] - Menubar
 
-# [X] - Nav Link
+- [ ] - Navigation Menu
 
-# [] - Pagination
+- [X] - Nav Link
 
-# [X] - Popover
+- [ ] - Pagination
 
-# [X] - Selection Popover
+- [X] - Popover
 
-# [] - Progress
+- [X] - Selection Popover
 
-# [] - Radio Group
+- [ ] - Progress
 
-# [] - Resizable
+- [ ] - Radio Group
 
-# [X] - Scroll Area
+- [ ] - Resizable
 
-# [] - Select & with Combobox
+- [X] - Scroll Area
 
-# [] - Separator
+- [ ] - Select & with Combobox
 
-# [] - Sheet
+- [ ] - Separator
 
-# [] - Skeleton
+- [ ] - Sheet
 
-# [X] - Slider
+- [ ] - Skeleton
 
-# [] - Sonner
+- [X] - Slider
 
-# [X] - Switch
+- [ ] - Sonner
 
-# [] - Tabs
+- [X] - Switch
 
-# [X] - TextArea
+- [ ] - Tabs
 
-# [] - Toast
+- [X] - TextArea
 
-# [] - Toggle
+- [ ] - Toast
 
-# [] - Toggle Group
+- [ ] - Toggle
 
-# [] - Tooltip
+- [ ] - Toggle Group
 
-# [] - Color Picker
+- [ ] - Tooltip
+
+- [ ] - Color Picker
