@@ -2,8 +2,6 @@
         "$schema": "https://json.schemastore.org/tsconfig.json",
         "display": "Default",
         "compilerOptions": {
-                "tsx": "react",
-                "jsx": "react",
                 "composite": false,
                 "esModuleInterop": true,
                 "forceConsistentCasingInFileNames": true,
@@ -33,10 +31,7 @@
         ],
         "include": [
                 "**/*.d.ts",
-                "apps/docs/theme.config.jsx",
-                "apps/docs/components/button.jsx",
-                "** /*.ts",
+                "**/*.ts",
                 "**/*.tsx",
-                "apps/docs/theme.config.jsx"
         ]
 }
