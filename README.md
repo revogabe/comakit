@@ -1,97 +1,95 @@
-# @comakit/ui
+# [] - Accordion
 
-- [ ] - Accordion
+# [] - Alert
 
-- [ ] - Alert
+# [X] - Alert Dialog
 
-- [X] - Alert Dialog
+# [] - Aspect Ratio
 
-- [ ] - Aspect Ratio
+# [X] - Avatar
 
-- [X] - Avatar
+# [] - Badge
 
-- [ ] - Badge
+# [X] - Button
 
-- [X] - Button
+# [X] - Calendar
 
-- [X] - Calendar
+# [X] - Card
 
-- [X] - Card
+# [] - Carousel
 
-- [ ] - Carousel
+# [] - Checkbox
 
-- [ ] - Checkbox
+# [] - Collapsible
 
-- [ ] - Collapsible
+# [] - Combobox
 
-- [ ] - Combobox
+# [] - Command
 
-- [ ] - Command
+# [] - Context Menu
 
-- [ ] - Context Menu
+# [] - Table with Tanstack
 
-- [ ] - Table with Tanstack
+# [] - Date Picker
 
-- [ ] - Date Picker
+# [X] - Dialog
 
-- [X] - Dialog
+# [] - Drawer
 
-- [ ] - Drawer
+# [X] - Dropdown Menu
 
-- [X] - Dropdown Menu
+# [X] - Form
 
-- [X] - Form
+# [X] - Hover Card
 
-- [X] - Hover Card
+# [X] - Text-Field
 
-- [X] - Text-Field
+# [X] - TextArea
 
-- [X] - TextArea
+# [] - Menubar
 
-- [ ] - Menubar
+# [] - Navigation Menu
 
-- [ ] - Navigation Menu
+# [X] - Nav Link
 
-- [X] - Nav Link
+# [] - Pagination
 
-- [ ] - Pagination
+# [X] - Popover
 
-- [X] - Popover
+# [X] - Selection Popover
 
-- [X] - Selection Popover
+# [] - Progress
 
-- [ ] - Progress
+# [] - Radio Group
 
-- [ ] - Radio Group
+# [] - Resizable
 
-- [ ] - Resizable
+# [X] - Scroll Area
 
-- [X] - Scroll Area
+# [] - Select & with Combobox
 
-- [ ] - Select & with Combobox
+# [] - Separator
 
-- [ ] - Separator
+# [] - Sheet
 
-- [ ] - Sheet
+# [] - Skeleton
 
-- [ ] - Skeleton
+# [X] - Slider
 
-- [X] - Slider
+# [] - Sonner
 
-- [ ] - Sonner
+# [X] - Switch
 
-- [X] - Switch
+# [] - Tabs
 
-- [ ] - Tabs
+# [X] - TextArea
 
-- [X] - TextArea
+# [] - Toast
 
-- [ ] - Toast
+# [] - Toggle
 
-- [ ] - Toggle
+# [] - Toggle Group
 
-- [ ] - Toggle Group
+# [] - Tooltip
 
-- [ ] - Tooltip
-
-- [ ] - Color Picker
+# [] - Color Picker
