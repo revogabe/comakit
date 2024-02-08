@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '../css/globals.css'
+import { Header } from '@/components/header'
+import { HeroOverlay } from '@/components/hero-overlay'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -16,7 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  h-screen overflow-x-hidden`}>{children}</body>
+      <body
+        className={`${inter.className}  relative min-h-screen w-screen overflow-x-hidden overflow-y-scroll`}
+      >
+        <Header />
+        <div className="h-screen w-full pt-14">
+          {children}
+          <HeroOverlay />
+        </div>
+      </body>
     </html>
   )
 }

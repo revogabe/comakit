@@ -208,7 +208,7 @@ const Home: App.Page = () => {
             <AuthCard className="absolute left-0 top-0 -z-10 translate-y-[0%] scale-90 duration-300 ease-out group-hover:translate-y-[-2%]" />
           </Feature>
           <Feature
-            title="Consistent Icons"
+            title="Icons"
             description="Responsive, consistent and animated icons. Available in SVG, React Components and more..."
             disabled
             date="Summer 2025"
