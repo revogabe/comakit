@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Comakit configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "aliases",
+        "options",
+        "framework"
+    ],
+    "properties": {
+        "aliases": {
+            "type": "object",
+            "description": "",
+            "additionalProperties": false,
+            "required": [
+                "components",
+                "utils"
+            ],
+            "properties": {
+                "components": {
+                    "type": "string",
+                    "pattern": "^~/",
+                    "description": "The import alias for components."
+                },
+                "utils": {
+                    "type": "string",
+                    "pattern": "^~/",
+                    "description": "The import alias for utilities."
+                }
+            }
+        },
+        "framework": {
+            "type": "object",
+            "description": "",
+            "additionalProperties": false,
+            "required": [
+                "css",
+                "javascript"
+            ],
+            "properties": {
+                "css": {
+                    "type": "string",
+                    "pattern": "^~/",
+                    "description": ""
+                },
+                "javascript": {
+                    "type": "string",
+                    "pattern": "^~/",
+                    "description": ""
+                }
+            }
+        },
+        "options": {
+            "type": "object",
+            "description": ".",
+            "additionalProperties": false,
+            "required": [
+                "rsc",
+                "typescript",
+                "cssGlobalDirectory"
+            ],
+            "properties": {
+                "rsc": {
+                    "type": "boolean",
+                    "pattern": "^~/",
+                    "description": ""
+                },
+                "typescript": {
+                    "type": "boolean",
+                    "pattern": "^~/",
+                    "description": ""
+                },
+                "cssGlobalDirectory": {
+                    "type": "boolean",
+                    "pattern": "^~/",
+                    "description": ""
+                }
+            }
+        }
+    }
+}
