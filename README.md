@@ -1,6 +1,6 @@
 # @comakit/ui
 
-- [ ] - Accordion
+- [X] - Accordion
 
 - [ ] - Alert
 
