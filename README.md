@@ -1,4 +1,4 @@
-# @maxui
+# @comakit
 
 - [X] - Accordion
 
