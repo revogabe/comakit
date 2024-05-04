@@ -225,9 +225,9 @@ const Home: App.Page = () => {
         </div>
 
         {/* FAQ */}
-        <div className="flex w-full max-w-[1080px] flex-col items-center justify-center gap-12">
-          <div className="text-center ">
-            <h2>Frequently Asked Questions</h2>
+        <div className="flex w-full flex-col items-center justify-center gap-12">
+          <div className="text-center">
+            <h1>Frequently Asked Questions</h1>
             <p className="mt-2">Here are some of our frequently asked questions.</p>
           </div>
           <Faq />
