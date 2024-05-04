@@ -13,6 +13,9 @@
         "^build"
       ],
       "outputs": [
+        "dist/**",
+        ".output/**",
+        ".nuxt/**",
         ".next/**",
         "!.next/cache/**"
       ]
