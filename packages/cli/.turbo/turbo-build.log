@@ -6,9 +6,4 @@ CLI Building entry: src/index.ts
 CLI Using tsconfig: ../../tsconfig.json
 CLI tsup v8.0.1
 CLI Using tsup config: /home/revogabe/www/comakit/packages/cli/tsup.config.ts
-CLI Target: node16
-CLI Cleaning output folder
-CJS Build start
-CJS dist/index.cjs 52.00 B
-CJS ⚡️ Build success in 8ms
  ELIFECYCLE  Command failed.
