@@ -51,7 +51,7 @@ export const Header = () => {
           <NavLink
             variant="secondary"
             className="text-muted-foreground hover:text-foreground text-sm font-medium duration-200 ease-out"
-            href="http://localhost:3000/docs"
+            href="http://comakit.com/docs"
           >
             Docs
           </NavLink>

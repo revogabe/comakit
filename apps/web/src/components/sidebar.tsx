@@ -16,7 +16,7 @@ export const Sidebar = () => {
       <div className="lg:border-border contents lg:pointer-events-auto lg:block  lg:w-60 lg:overflow-y-auto lg:border-r lg:px-6 lg:pb-8 ">
         <nav className="hiddenlg:block">
           <Link
-            href="http://localhost:3000"
+            href="http://comakit.com"
             className="flex  w-full shrink-0 items-center justify-start gap-2.5  pb-6 pt-4 duration-300 ease-out hover:opacity-70"
           >
             <h1 className="flex items-center gap-3">
