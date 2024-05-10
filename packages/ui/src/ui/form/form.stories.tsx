@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render(props) {
+    // When isError is true it automatically changes the Hint to error and turns red
     return (
       <Form.Field isError={false}>
         <Form.Label}>
