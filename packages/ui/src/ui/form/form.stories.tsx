@@ -14,8 +14,8 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   render(props) {
     return (
-      <Form.Field>
-        <Form.Label trailing={<NavLink className="cursor-pointer">Esqueceu senha</NavLink>}>
+      <Form.Field isError={false}>
+        <Form.Label}>
           Password
         </Form.Label>
         <Form.Control type="password" placeholder="Placeholder" size="sm" />
